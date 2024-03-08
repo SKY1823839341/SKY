@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Awesome-pyecharts</title>
+	<script type="text/javascript" src="https://assets.pyecharts.org/assets/echarts.min.js"></script>
+
+
+
+</head>
+<body>
+<div id="8ee814b615f44cfe869581e1546c04d6" class="chart-container" style="width:900px; height:600px;"></div>
+<script>
+	var chart_8ee814b615f44cfe869581e1546c04d6 = echarts.init(
+			document.getElementById('8ee814b615f44cfe869581e1546c04d6'), 'white', {renderer: 'canvas'});
+	var option_8ee814b615f44cfe869581e1546c04d6 = {
+		"animation": true,
+		"animationThreshold": 2000,
+		"animationDuration": 1000,
+		"animationEasing": "cubicOut",
+		"animationDelay": 0,
+		"animationDurationUpdate": 300,
+		"animationEasingUpdate": "cubicOut",
+		"animationDelayUpdate": 0,
+		"color": [
+			"#c23531",
+			"#2f4554",
+			"#61a0a8",
+			"#d48265",
+			"#749f83",
+			"#ca8622",
+			"#bda29a",
+			"#6e7074",
+			"#546570",
+			"#c4ccd3",
+			"#f05b72",
+			"#ef5b9c",
+			"#f47920",
+			"#905a3d",
+			"#fab27b",
+			"#2a5caa",
+			"#444693",
+			"#726930",
+			"#b2d235",
+			"#6d8346",
+			"#ac6767",
+			"#1d953f",
+			"#6950a1",
+			"#918597"
+		],
+		"series": [
+			{
+				"type": "funnel",
+				"data": [
+					{
+						"name": "3-4\u5e74\u7ecf\u9a8c",
+						"value": 42
+					},
+					{
+						"name": "5-7\u5e74\u7ecf\u9a8c",
+						"value": 10
+					},
+					{
+						"name": "8-9\u5e74\u7ecf\u9a8c",
+						"value": 1
+					},
+					{
+						"name": "1\u5e74\u7ecf\u9a8c",
+						"value": 14
+					},
+					{
+						"name": "2\u5e74\u7ecf\u9a8c",
+						"value": 27
+					},
+					{
+						"name": "10\u5e74\u4ee5\u4e0a\u7ecf\u9a8c",
+						"value": 1
+					},
+					{
+						"name": "\u65e0\u9700\u7ecf\u9a8c",
+						"value": 4
+					}
+				],
+				"sort": "descending",
+				"gap": 0,
+				"label": {
+					"show": true,
+					"position": "inside",
+					"margin": 8
+				}
+			}
+		],
+		"legend": [
+			{
+				"data": [
+					"\u65e0\u9700\u7ecf\u9a8c",
+					"3-4\u5e74\u7ecf\u9a8c",
+					"5-7\u5e74\u7ecf\u9a8c",
+					"8-9\u5e74\u7ecf\u9a8c",
+					"1\u5e74\u7ecf\u9a8c",
+					"2\u5e74\u7ecf\u9a8c",
+					"10\u5e74\u4ee5\u4e0a\u7ecf\u9a8c"
+				],
+				"selected": {
+					"3-4\u5e74\u7ecf\u9a8c": true,
+					"5-7\u5e74\u7ecf\u9a8c": true,
+					"8-9\u5e74\u7ecf\u9a8c": true,
+					"1\u5e74\u7ecf\u9a8c": true,
+					"2\u5e74\u7ecf\u9a8c": true,
+					"10\u5e74\u4ee5\u4e0a\u7ecf\u9a8c": true,
+					"\u65e0\u9700\u7ecf\u9a8c": true
+				},
+				"show": true,
+				"padding": 5,
+				"itemGap": 10,
+				"itemWidth": 25,
+				"itemHeight": 14
+			}
+		],
+		"tooltip": {
+			"show": true,
+			"trigger": "item",
+			"triggerOn": "mousemove|click",
+			"axisPointer": {
+				"type": "line"
+			},
+			"showContent": true,
+			"alwaysShowContent": false,
+			"showDelay": 0,
+			"hideDelay": 100,
+			"textStyle": {
+				"fontSize": 14
+			},
+			"borderWidth": 0,
+			"padding": 5
+		},
+		"title": [
+			{
+				"text": "",
+				"padding": 5,
+				"itemGap": 10
+			}
+		]
+	};
+	chart_8ee814b615f44cfe869581e1546c04d6.setOption(option_8ee814b615f44cfe869581e1546c04d6);
+</script>
+
+
+
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+<!--<!DOCTYPE html>
+<html lang="zh" xmlns:th="http://www.thymeleaf.org" xmlns:shiro="http://www.pollix.at/thymeleaf/shiro">
+<head>
+	<th:block th:include="include :: header('岗位列表')" />
+</head>
+<body class="gray-bg">
+	<div class="container-div">
+		<div class="row">
+			<div class="col-sm-12 search-collapse">
+				<form id="post-form">
+					<div class="select-list">
+						<ul>
+							<li>
+								岗位编码：<input type="text" name="postCode"/>
+							</li>
+							<li>
+								岗位名称：<input type="text" name="postName"/>
+							</li>
+							<li>
+								岗位状态：<select name="status" th:with="type=${@dict.getType('sys_normal_disable')}">
+									<option value="">所有</option>
+									<option th:each="dict : ${type}" th:text="${dict.dictLabel}" th:value="${dict.dictValue}"></option>
+								</select>
+							</li>
+							<li>
+								<a class="btn btn-primary btn-rounded btn-sm" onclick="$.table.search()"><i class="fa fa-search"></i>&nbsp;搜索</a>
+							    <a class="btn btn-warning btn-rounded btn-sm" onclick="$.form.reset()"><i class="fa fa-refresh"></i>&nbsp;重置</a>
+							</li>
+						</ul>
+					</div>
+				</form>
+			</div>
+			
+			<div class="btn-group-sm" id="toolbar" role="group">
+				<a class="btn btn-success" onclick="$.operate.add()" shiro:hasPermission="system:jiuye:add">
+	                <i class="fa fa-plus"></i> 新增
+	            </a>
+				<a class="btn btn-primary single disabled" onclick="$.operate.edit()" shiro:hasPermission="system:jiuye:edit">
+		            <i class="fa fa-edit"></i> 修改
+		        </a>
+				<a class="btn btn-danger multiple disabled" onclick="$.operate.removeAll()" shiro:hasPermission="system:jiuye:remove">
+		            <i class="fa fa-remove"></i> 删除
+		        </a>
+				<a class="btn btn-warning" onclick="$.table.exportExcel()" shiro:hasPermission="system:jiuye:export">
+		            <i class="fa fa-download"></i> 导出
+		        </a>
+	        </div>
+	        
+	        <div class="col-sm-12 select-table table-striped">
+			    <table id="bootstrap-table"></table>
+			</div>
+		</div>
+	</div>
+	<th:block th:include="include :: footer" />
+	<script th:inline="javascript">
+		var editFlag = [[${@permission.hasPermi('system:jiuye:edit')}]];
+		var removeFlag = [[${@permission.hasPermi('system:jiuye:remove')}]];
+		var datas = [[${@dict.getType('sys_normal_disable')}]];
+		var prefix = ctx + "system/post";
+
+		$(function() {
+		    var options = {
+		        url: prefix + "/list",
+		        createUrl: prefix + "/add",
+		        updateUrl: prefix + "/edit/{id}",
+		        removeUrl: prefix + "/remove",
+		        exportUrl: prefix + "/export",
+		        sortName: "postSort",
+		        modalName: "岗位",
+		        columns: [{
+		            checkbox: true
+		        },
+		        {
+		            field: 'postId',
+		            title: '岗位编号'
+		        },
+		        {
+		            field: 'postCode',
+		            title: '岗位编码',
+		            sortable: true
+		        },
+		        {
+		            field: 'postName',
+		            title: '岗位名称',
+		            sortable: true
+		        },
+		        {
+		            field: 'postSort',
+		            title: '显示顺序',
+		            sortable: true
+		        },
+		        {
+		            field: 'status',
+		            title: '状态',
+		            align: 'center',
+		            formatter: function(value, row, index) {
+		            	return $.table.selectDictLabel(datas, value);
+		            }
+		        },
+		        {
+		            field: 'createTime',
+		            title: '创建时间',
+		            sortable: true
+		        },
+		        {
+		            title: '操作',
+		            align: 'center',
+		            formatter: function(value, row, index) {
+		                var actions = [];
+		                actions.push('<a class="btn btn-success btn-xs ' + editFlag + '" href="javascript:void(0)" onclick="$.operate.edit(\'' + row.postId + '\')"><i class="fa fa-edit"></i>编辑</a> ');
+		                actions.push('<a class="btn btn-danger btn-xs ' + removeFlag + '" href="javascript:void(0)" onclick="$.operate.remove(\'' + row.postId + '\')"><i class="fa fa-remove"></i>删除</a>');
+		                return actions.join('');
+		            }
+		        }]
+		    };
+		    $.table.init(options);
+		});
+	</script>
+</body>
+</html>-->

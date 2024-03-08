@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Awesome-pyecharts</title>
+	<script type="text/javascript" src="https://assets.pyecharts.org/assets/echarts.min.js"></script>
+
+
+
+
+
+
+</head>
+<body>
+<div id="6597885956eb4c299a4db454a9ff6912" class="chart-container" style="width:900px; height:500px;"></div>
+<script>
+	var chart_6597885956eb4c299a4db454a9ff6912 = echarts.init(
+			document.getElementById('6597885956eb4c299a4db454a9ff6912'), 'white', {renderer: 'canvas'});
+	var option_6597885956eb4c299a4db454a9ff6912 = {
+		"animation": true,
+		"animationThreshold": 2000,
+		"animationDuration": 1000,
+		"animationEasing": "cubicOut",
+		"animationDelay": 0,
+		"animationDurationUpdate": 300,
+		"animationEasingUpdate": "cubicOut",
+		"animationDelayUpdate": 0,
+		"color": [
+			"#c23531",
+			"#2f4554",
+			"#61a0a8",
+			"#d48265",
+			"#749f83",
+			"#ca8622",
+			"#bda29a",
+			"#6e7074",
+			"#546570",
+			"#c4ccd3",
+			"#f05b72",
+			"#ef5b9c",
+			"#f47920",
+			"#905a3d",
+			"#fab27b",
+			"#2a5caa",
+			"#444693",
+			"#726930",
+			"#b2d235",
+			"#6d8346",
+			"#ac6767",
+			"#1d953f",
+			"#6950a1",
+			"#918597"
+		],
+		"series": [
+			{
+				"type": "pie",
+				"clockwise": true,
+				"data": [
+					{
+						"name": "\u4e2d\u4e13/\u4e2d\u6280",
+						"value": 19
+					},
+					{
+						"name": "\u535a\u58eb",
+						"value": 28
+					},
+					{
+						"name": "\u5927\u4e13",
+						"value": 1684
+					},
+					{
+						"name": "\u5b66\u5386\u4e0d\u9650",
+						"value": 127
+					},
+					{
+						"name": "\u672c\u79d1",
+						"value": 3926
+					},
+					{
+						"name": "\u7855\u58eb",
+						"value": 465
+					},
+					{
+						"name": "\u9ad8\u4e2d",
+						"value": 14
+					}
+				],
+				"radius": [
+					"40%",
+					"75%"
+				],
+				"center": [
+					"40%",
+					"50%"
+				],
+				"label": {
+					"show": true,
+					"position": "top",
+					"margin": 8
+				},
+				"itemStyle": {
+					"normal": {
+						"barBorderRadius": [
+							30,
+							30,
+							30,
+							30
+						],
+						"shadowBlur": 10,
+						"shadowColor": "rgba(0,191,255,0.5)",
+						"shadowOffsetY": 1,
+						"opacity": 0.8
+					}
+				},
+				"rippleEffect": {
+					"show": true,
+					"brushType": "stroke",
+					"scale": 2.5,
+					"period": 4
+				},
+				"abel_opts": {
+					"show": true,
+					"position": "top",
+					"color": "#00c6d7",
+					"margin": 8,
+					"fontSize": "20",
+					"formatter": "{b}\uff1a{d}%"
+				}
+			}
+		],
+		"legend": [
+			{
+				"data": [
+					"\u4e2d\u4e13/\u4e2d\u6280",
+					"\u535a\u58eb",
+					"\u5927\u4e13",
+					"\u5b66\u5386\u4e0d\u9650",
+					"\u672c\u79d1",
+					"\u7855\u58eb",
+					"\u9ad8\u4e2d"
+				],
+				"selected": {},
+				"type": "scroll",
+				"show": true,
+				"left": "80%",
+				"top": "25%",
+				"orient": "vertical",
+				"padding": 5,
+				"itemGap": 10,
+				"itemWidth": 25,
+				"itemHeight": 14
+			}
+		],
+		"tooltip": {
+			"show": true,
+			"trigger": "item",
+			"triggerOn": "mousemove|click",
+			"axisPointer": {
+				"type": "line"
+			},
+			"showContent": true,
+			"alwaysShowContent": false,
+			"showDelay": 0,
+			"hideDelay": 100,
+			"textStyle": {
+				"fontSize": 14
+			},
+			"borderWidth": 0,
+			"padding": 5
+		},
+		"title": [
+			{
+				"text": "\u6570\u636e\u5206\u6790\u5c97\u5c97\u4f4d\u5b66\u5386\u8981\u6c42\u60c5\u51b5",
+				"left": "1%",
+				"padding": 5,
+				"itemGap": 10,
+				"textStyle": {
+					"color": "#2C3B4C",
+					"fontWeight": "bolder",
+					"fontSize": 20
+				}
+			}
+		]
+	};
+	chart_6597885956eb4c299a4db454a9ff6912.setOption(option_6597885956eb4c299a4db454a9ff6912);
+</script>
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+<!--<!DOCTYPE html>
+<html lang="zh" xmlns:th="http://www.thymeleaf.org" xmlns:shiro="http://www.pollix.at/thymeleaf/shiro">
+<head>
+	<th:block th:include="include :: header('通知公告列表')" />
+</head>
+<body class="gray-bg">
+    <div class="container-div">
+		<div class="row">
+			<div class="col-sm-12 search-collapse">
+				<form id="notice-form">
+					<div class="select-list">
+						<ul>
+							<li>
+								公告标题：<input type="text" name="noticeTitle"/>
+							</li>
+							<li>
+								操作人员：<input type="text" name="createBy"/>
+							</li>
+							<li>
+								公告类型：<select name="noticeType" th:with="type=${@dict.getType('sys_notice_type')}">
+									<option value="">所有</option>
+									<option th:each="dict : ${type}" th:text="${dict.dictLabel}" th:value="${dict.dictValue}"></option>
+								</select>
+							</li>
+							<li>
+								<a class="btn btn-primary btn-rounded btn-sm" onclick="$.table.search()"><i class="fa fa-search"></i>&nbsp;搜索</a>
+								<a class="btn btn-warning btn-rounded btn-sm" onclick="$.form.reset()"><i class="fa fa-refresh"></i>&nbsp;重置</a>
+							</li>
+						</ul>
+					</div>
+				</form>
+			</div>
+			
+	        <div class="btn-group-sm" id="toolbar" role="group">
+		        <a class="btn btn-success" onclick="$.operate.addFull()" shiro:hasPermission="system:tongzhi:add">
+		            <i class="fa fa-plus"></i> 新增
+		        </a>
+		        <a class="btn btn-primary single disabled" onclick="$.operate.editFull()" shiro:hasPermission="system:tongzhi:edit">
+		            <i class="fa fa-edit"></i> 修改
+		        </a>
+		        <a class="btn btn-danger multiple disabled" onclick="$.operate.removeAll()" shiro:hasPermission="system:tongzhi:remove">
+		            <i class="fa fa-remove"></i> 删除
+		        </a>
+	        </div>
+	        
+	        <div class="col-sm-12 select-table table-striped">
+	            <table id="bootstrap-table"></table>
+	        </div>
+    	</div>
+    </div>
+    <th:block th:include="include :: footer" />
+    <script th:inline="javascript">
+        var editFlag = [[${@permission.hasPermi('system:tongzhi:edit')}]];
+        var removeFlag = [[${@permission.hasPermi('system:tongzhi:remove')}]];
+        var types = [[${@dict.getType('sys_notice_type')}]];
+        var datas = [[${@dict.getType('sys_notice_status')}]];
+        var prefix = ctx + "system/notice";
+
+        $(function() {
+            var options = {
+                url: prefix + "/list",
+                createUrl: prefix + "/add",
+                updateUrl: prefix + "/edit/{id}",
+                removeUrl: prefix + "/remove",
+                modalName: "公告",
+                columns: [{
+		            checkbox: true
+		        },
+				{
+					field : 'noticeId', 
+					title : '序号' 
+				},
+				{
+					field : 'noticeTitle', 
+					title : '公告标题' 
+				},
+				{
+		            field: 'noticeType',
+		            title: '公告类型',
+		            align: 'center',
+		            formatter: function(value, row, index) {
+		            	return $.table.selectDictLabel(types, value);
+		            }
+		        },
+				{
+		            field: 'status',
+		            title: '状态',
+		            align: 'center',
+		            formatter: function(value, row, index) {
+		            	return $.table.selectDictLabel(datas, value);
+		            }
+		        },
+				{
+					field : 'createBy', 
+					title : '创建者' 
+				},
+				{
+		            field: 'createTime',
+		            title: '创建时间',
+		            sortable: true
+		        },
+		        {
+		            title: '操作',
+		            align: 'center',
+		            formatter: function(value, row, index) {
+		            	var actions = [];
+		            	actions.push('<a class="btn btn-success btn-xs ' + editFlag + '" href="javascript:void(0)" onclick="$.operate.editFull(\'' + row.noticeId + '\')"><i class="fa fa-edit"></i>编辑</a> ');
+                        actions.push('<a class="btn btn-danger btn-xs ' + removeFlag + '" href="javascript:void(0)" onclick="$.operate.remove(\'' + row.noticeId + '\')"><i class="fa fa-remove"></i>删除</a>');
+						return actions.join('');
+		            }
+		        }]
+            };
+            $.table.init(options);
+        });
+    </script>
+</body>
+</html>-->

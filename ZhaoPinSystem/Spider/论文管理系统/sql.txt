@@ -1,0 +1,98 @@
+-- 学生表（Students）
+CREATE TABLE Students (
+  StudentID VARCHAR(20) PRIMARY KEY,
+  Name VARCHAR(50),
+  StudentNumber VARCHAR(20),
+  Grade VARCHAR(10),
+  Major VARCHAR(50),
+  ContactInformation VARCHAR(100),
+  OtherPersonalInfo VARCHAR(255)
+);
+
+-- 就业信息表（Employment Information）
+CREATE TABLE EmploymentInformation (
+  StudentID VARCHAR(20),
+  EmploymentStatus VARCHAR(20),
+  CompanyName VARCHAR(100),
+  Position VARCHAR(50),
+  EmploymentDate DATE,
+  Salary DECIMAL(10, 2),
+  OtherEmploymentInfo VARCHAR(255),
+  PRIMARY KEY (StudentID),
+  FOREIGN KEY (StudentID) REFERENCES Students(StudentID)
+);
+
+-- 实习信息表（Internship Information）
+CREATE TABLE InternshipInformation (
+  StudentID VARCHAR(20),
+  CompanyName VARCHAR(100),
+  InternshipPosition VARCHAR(50),
+  StartDate DATE,
+  EndDate DATE,
+  InternshipReport TEXT,
+  OtherInternshipInfo VARCHAR(255),
+  PRIMARY KEY (StudentID),
+  FOREIGN KEY (StudentID) REFERENCES Students(StudentID)
+);
+
+-- 学术成绩表（Academic Scores）
+CREATE TABLE AcademicScores (
+  StudentID VARCHAR(20),
+  CourseName VARCHAR(100),
+  Score DECIMAL(5, 2),
+  Semester VARCHAR(20),
+  Instructor VARCHAR(50),
+  OtherAcademicScoreInfo VARCHAR(255),
+  PRIMARY KEY (StudentID, CourseName),
+  FOREIGN KEY (StudentID) REFERENCES Students(StudentID)
+);
+
+-- 证书表（Certificates）
+CREATE TABLE Certificates (
+  StudentID VARCHAR(20),
+  CertificateName VARCHAR(100),
+  IssuingAuthority VARCHAR(100),
+  IssueDate DATE,
+  OtherCertificateInfo VARCHAR(255),
+  PRIMARY KEY (StudentID, CertificateName),
+  FOREIGN KEY (StudentID) REFERENCES Students(StudentID)
+);
+
+-- 就业反馈表（Employment Feedback）
+CREATE TABLE EmploymentFeedback (
+  StudentID VARCHAR(20),
+  EmploymentEvaluation VARCHAR(255),
+  EmploymentIntention VARCHAR(100),
+  FurtherEducationAfterGraduation VARCHAR(255),
+  OtherFeedbackInfo VARCHAR(255),
+  PRIMARY KEY (StudentID),
+  FOREIGN KEY (StudentID) REFERENCES Students(StudentID)
+);
+INSERT INTO Students (StudentID, Name, StudentNumber, Grade, Major, ContactInformation, OtherPersonalInfo)
+VALUES
+  ('S001', '张三', '20210001', '大三', '计算机科学与技术', 'zhangsan@example.com', '无'),
+  ('S002', '李四', '20190015', '大四', '软件工程', 'lisi@example.com', '熟悉Java编程'),
+  ('S003', '王五', '20220008', '大二', '信息管理与信息系统', 'wangwu@example.com', '对数据分析感兴趣'),
+  ('S004', '赵六', '20211010', '大一', '人工智能', 'zhaoliu@example.com', '无'),
+  ('S005', '钱七', '20221005', '大一', '数据科学与大数据技术', 'qianqi@example.com', '善于团队合作');
+INSERT INTO EmploymentInformation (StudentID, EmploymentStatus, CompanyName, Position, EmploymentDate, Salary, OtherEmploymentInfo)
+VALUES
+  ('S001', '已就业', 'ABC公司', '软件工程师', '2023-05-15', 5000.00, '无'),
+  ('S002', '待业', NULL, NULL, NULL, NULL, '正在寻找合适的工作机会'),
+  ('S003', '已就业', 'XYZ公司', '数据分析师', '2023-03-20', 6000.00, '实习经验丰富'),
+  ('S004', '待业', NULL, NULL, NULL, NULL, '计划进修相关专业知识'),
+  ('S005', '已就业', 'EFG公司', '数据科学家', '2023-04-10', 8000.00, '获得了优秀实习评价');
+INSERT INTO AcademicScores (StudentID, CourseName, Score, Semester, Instructor, OtherAcademicScoreInfo)
+VALUES
+  ('S001', '数据库', 85.5, '2022秋季学期', '张老师', '课程作业得分较高'),
+  ('S002', '软件工程', 92.0, '2022秋季学期', '李老师', '获得了优秀论文奖'),
+  ('S003', '数据结构', 78.5, '2022秋季学期', '王老师', '课堂参与积极'),
+  ('S004', '计算机网络', 80.0, '2022秋季学期', '赵老师', '参加了网络安全竞赛'),
+  ('S005', '人工智能导论', 88.5, '2022秋季学期', '钱老师', '对深度学习有较好理解');
+INSERT INTO Certificates (StudentID, CertificateName, IssuingAuthority, IssueDate, OtherCertificateInfo)
+VALUES
+  ('S001', '英语四级', '大学英语四级考试委员会', '2022-12-15', '成绩：550'),
+  ('S002', '软件开发工程师', '国家信息技术认证中心', '2023-03-02', '证书编号：123456'),
+  ('S003', '数据分析师', '数据分析协会', '2023-01-20', '通过了专业认证考试'),
+  ('S004', '计算机图像处理', '计算机学会', '2022-11-10', '参加了相关培训课程'),
+  ('S005', '数据科学与大数据技术', '大数据技术认证机构', '2023-02-05', '获得优秀毕业设计奖');
